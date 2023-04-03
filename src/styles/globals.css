@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-inter;
+  }
+}
+
+@layer components {
+  .test:hover > ul {
+    @apply block opacity-100 visible;
+  }
+
+  .message-inner {
+    @apply flex flex-col bg-[#95b1af] w-full max-w-[200px] rounded-lg p-2 my-2 relative;
+  }
+
+  .incoming-message .message-inner {
+    @apply bg-[#334b4a];
+  }
+
+  .incoming-message {
+    @apply flex justify-end mr-4;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #1e1e1e !important;
+  color: white !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 30%;
+  background-image: url("../../public/images/overlay.png");
+  background-position: 0% 100%;
+}
+
+#__next {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
